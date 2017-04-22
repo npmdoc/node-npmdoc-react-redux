@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/gaearon/react-redux"
-
-    >react-redux (v5.0.4)</a>
+    <a href="https://github.com/gaearon/react-redux">react-redux (v5.0.4)</a>
 </h1>
 <h4>Official React bindings for Redux</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.react-redux">module react-redux</a><ol>
 
@@ -720,7 +713,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
-  var _ref2 = arguments.length &#x3e; 3 &#x26;&#x26; arguments[3] !== undefined ? arguments[3] : {},
+  var _ref2 = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : {},
       _ref2$pure = _ref2.pure,
       pure = _ref2$pure === undefined ? true : _ref2$pure,
       _ref2$areStatesEqual = _ref2.areStatesEqual,
@@ -731,23 +724,23 @@
       areStatePropsEqual = _ref2$areStatePropsEq === undefined ? _shallowEqual2.default : _ref2$areStatePropsEq,
       _ref2$areMergedPropsE = _ref2.areMergedPropsEqual,
       areMergedPropsEqual = _ref2$areMergedPropsE === undefined ? _shallowEqual2.default : _ref2$areMergedPropsE,
-      extraOptions = _objectWithoutProperties(_ref2, [&#x27;pure&#x27;, &#x27;areStatesEqual&#x27;, &#x27;areOwnPropsEqual&#x27;, &#x27;areStatePropsEqual&#x27;, &#x27;areMergedPropsEqual
-&#x27;]);
+      extraOptions = _objectWithoutProperties(_ref2, ['pure', 'areStatesEqual', 'areOwnPropsEqual', 'areStatePropsEqual', 'areMergedPropsEqual
+']);
 
-  var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, &#x27;mapStateToProps&#x27;);
-  var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, &#x27;mapDispatchToProps&#x27;);
-  var initMergeProps = match(mergeProps, mergePropsFactories, &#x27;mergeProps&#x27;);
+  var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+  var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+  var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
 
   return connectHOC(selectorFactory, _extends({
     // used in error messages
-    methodName: &#x27;connect&#x27;,
+    methodName: 'connect',
 
-    // used to compute Connect&#x27;s displayName from the wrapped component&#x27;s displayName.
+    // used to compute Connect's displayName from the wrapped component's displayName.
     getDisplayName: function getDisplayName(name) {
-      return &#x27;Connect(&#x27; + name + &#x27;)&#x27;;
+      return 'Connect(' + name + ')';
     },
 
-    // if mapStateToProps is falsy, the Connect component doesn&#x27;t subscribe to store state changes
+    // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
     shouldHandleStateChanges: Boolean(mapStateToProps),
 
     // passed through to selectorFactory
@@ -774,9 +767,9 @@
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function connectAdvanced(<span class="apidocCodeCommentSpan"> /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options) =&#x3e; (state, props) =&#x3e; ({
+    <li>description and source-code<pre class="apidocCodePre">function connectAdvanced(<span class="apidocCodeCommentSpan"> /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options) =&gt; (state, props) =&gt; ({
       thing: state.things[props.thingId],
-      saveThing: fields =&#x3e; dispatch(actionCreators.saveThing(props.thingId, fields)),
+      saveThing: fields =&gt; dispatch(actionCreators.saveThing(props.thingId, fields)),
     }))(YourComponent)
    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
   outside of their selector as an optimization. Options passed to connectAdvanced are passed to
@@ -788,25 +781,25 @@
 </span>selectorFactory) {
   var _contextTypes, _childContextTypes;
 
-  var _ref = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {},
+  var _ref = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {},
       _ref$getDisplayName = _ref.getDisplayName,
       getDisplayName = _ref$getDisplayName === undefined ? function (name) {
-    return &#x27;ConnectAdvanced(&#x27; + name + &#x27;)&#x27;;
+    return 'ConnectAdvanced(' + name + ')';
   } : _ref$getDisplayName,
       _ref$methodName = _ref.methodName,
-      methodName = _ref$methodName === undefined ? &#x27;connectAdvanced&#x27; : _ref$methodName,
+      methodName = _ref$methodName === undefined ? 'connectAdvanced' : _ref$methodName,
       _ref$renderCountProp = _ref.renderCountProp,
       renderCountProp = _ref$renderCountProp === undefined ? undefined : _ref$renderCountProp,
       _ref$shouldHandleStat = _ref.shouldHandleStateChanges,
       shouldHandleStateChanges = _ref$shouldHandleStat === undefined ? true : _ref$shouldHandleStat,
       _ref$storeKey = _ref.storeKey,
-      storeKey = _ref$storeKey === undefined ? &#x27;store&#x27; : _ref$storeKey,
+      storeKey = _ref$storeKey === undefined ? 'store' : _ref$storeKey,
       _ref$withRef = _ref.withRef,
       withRef = _ref$withRef === undefined ? false : _ref$withRef,
-      connectOptions = _objectWithoutProperties(_ref, [&#x27;getDisplayName&#x27;, &#x27;methodName&#x27;, &#x27;renderCountProp&#x27;, &#x27;shouldHandleStateChanges
-&#x27;, &#x27;storeKey&#x27;, &#x27;withRef&#x27;]);
+      connectOptions = _objectWithoutProperties(_ref, ['getDisplayName', 'methodName', 'renderCountProp', 'shouldHandleStateChanges
+', 'storeKey', 'withRef']);
 
-  var subscriptionKey = storeKey + &#x27;Subscription&#x27;;
+  var subscriptionKey = storeKey + 'Subscription';
   var version = hotReloadingVersion++;
 
   var contextTypes = (_contextTypes = {}, _contextTypes[storeKey] = _PropTypes.storeShape, _contextTypes[subscriptionKey] = _PropTypes
@@ -815,10 +808,10 @@
 );
 
   return function wrapWithConnect(WrappedComponent) {
-    (0, _invariant2.default)(typeof WrappedComponent == &#x27;function&#x27;, &#x27;You must pass a component to the function returned by &#x27; + (&#x27;
-connect. Instead received &#x27; + JSON.stringify(WrappedComponent)));
+    (0, _invariant2.default)(typeof WrappedComponent == 'function', 'You must pass a component to the function returned by ' + ('
+connect. Instead received ' + JSON.stringify(WrappedComponent)));
 
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || &#x27;Component&#x27;;
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
 
     var displayName = getDisplayName(wrappedComponentName);
 
@@ -849,8 +842,8 @@ connect. Instead received &#x27; + JSON.stringify(WrappedComponent)));
         _this.propsMode = Boolean(props[storeKey]);
         _this.setWrappedInstance = _this.setWrappedInstance.bind(_this);
 
-        (0, _invariant2.default)(_this.store, &#x27;Could not find &#x22;&#x27; + storeKey + &#x27;&#x22; in either the context or props of &#x27; + (&#x27;&#x22;&#x27; + displayName
- + &#x27;&#x22;. Either wrap the root component in a &#x3c;Provider&#x3e;, &#x27;) + ...</pre></li>
+        (0, _invariant2.default)(_this.store, 'Could not find "' + storeKey + '" in either the context or props of ' + ('"' + displayName
+ + '". Either wrap the root component in a &lt;Provider&gt;, ') + ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -1096,8 +1089,8 @@ connect. Instead received &#x27; + JSON.stringify(WrappedComponent)));
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1105,7 +1098,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1128,7 +1121,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function createConnect() {
-  var _ref = arguments.length &#x3e; 0 &#x26;&#x26; arguments[0] !== undefined ? arguments[0] : {},
+  var _ref = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {},
       _ref$connectHOC = _ref.connectHOC,
       connectHOC = _ref$connectHOC === undefined ? _connectAdvanced2.default : _ref$connectHOC,
       _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
@@ -1141,7 +1134,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       selectorFactory = _ref$selectorFactory === undefined ? _selectorFactory2.default : _ref$selectorFactory;
 
   return function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
-    var _ref2 = arguments.length &#x3e; 3 &#x26;&#x26; arguments[3] !== undefined ? arguments[3] : {},
+    var _ref2 = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : {},
         _ref2$pure = _ref2.pure,
         pure = _ref2$pure === undefined ? true : _ref2$pure,
         _ref2$areStatesEqual = _ref2.areStatesEqual,
@@ -1152,23 +1145,23 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
         areStatePropsEqual = _ref2$areStatePropsEq === undefined ? _shallowEqual2.default : _ref2$areStatePropsEq,
         _ref2$areMergedPropsE = _ref2.areMergedPropsEqual,
         areMergedPropsEqual = _ref2$areMergedPropsE === undefined ? _shallowEqual2.default : _ref2$areMergedPropsE,
-        extraOptions = _objectWithoutProperties(_ref2, [&#x27;pure&#x27;, &#x27;areStatesEqual&#x27;, &#x27;areOwnPropsEqual&#x27;, &#x27;areStatePropsEqual&#x27;, &#x27;areMergedPropsEqual
-&#x27;]);
+        extraOptions = _objectWithoutProperties(_ref2, ['pure', 'areStatesEqual', 'areOwnPropsEqual', 'areStatePropsEqual', 'areMergedPropsEqual
+']);
 
-    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, &#x27;mapStateToProps&#x27;);
-    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, &#x27;mapDispatchToProps&#x27;);
-    var initMergeProps = match(mergeProps, mergePropsFactories, &#x27;mergeProps&#x27;);
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
 
     return connectHOC(selectorFactory, _extends({
       // used in error messages
-      methodName: &#x27;connect&#x27;,
+      methodName: 'connect',
 
-      // used to compute Connect&#x27;s displayName from the wrapped component&#x27;s displayName.
+      // used to compute Connect's displayName from the wrapped component's displayName.
       getDisplayName: function getDisplayName(name) {
-        return &#x27;Connect(&#x27; + name + &#x27;)&#x27;;
+        return 'Connect(' + name + ')';
       },
 
-      // if mapStateToProps is falsy, the Connect component doesn&#x27;t subscribe to store state changes
+      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
       shouldHandleStateChanges: Boolean(mapStateToProps),
 
       // passed through to selectorFactory
@@ -1197,7 +1190,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
-  var _ref2 = arguments.length &#x3e; 3 &#x26;&#x26; arguments[3] !== undefined ? arguments[3] : {},
+  var _ref2 = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : {},
       _ref2$pure = _ref2.pure,
       pure = _ref2$pure === undefined ? true : _ref2$pure,
       _ref2$areStatesEqual = _ref2.areStatesEqual,
@@ -1208,23 +1201,23 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       areStatePropsEqual = _ref2$areStatePropsEq === undefined ? _shallowEqual2.default : _ref2$areStatePropsEq,
       _ref2$areMergedPropsE = _ref2.areMergedPropsEqual,
       areMergedPropsEqual = _ref2$areMergedPropsE === undefined ? _shallowEqual2.default : _ref2$areMergedPropsE,
-      extraOptions = _objectWithoutProperties(_ref2, [&#x27;pure&#x27;, &#x27;areStatesEqual&#x27;, &#x27;areOwnPropsEqual&#x27;, &#x27;areStatePropsEqual&#x27;, &#x27;areMergedPropsEqual
-&#x27;]);
+      extraOptions = _objectWithoutProperties(_ref2, ['pure', 'areStatesEqual', 'areOwnPropsEqual', 'areStatePropsEqual', 'areMergedPropsEqual
+']);
 
-  var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, &#x27;mapStateToProps&#x27;);
-  var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, &#x27;mapDispatchToProps&#x27;);
-  var initMergeProps = match(mergeProps, mergePropsFactories, &#x27;mergeProps&#x27;);
+  var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+  var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+  var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
 
   return connectHOC(selectorFactory, _extends({
     // used in error messages
-    methodName: &#x27;connect&#x27;,
+    methodName: 'connect',
 
-    // used to compute Connect&#x27;s displayName from the wrapped component&#x27;s displayName.
+    // used to compute Connect's displayName from the wrapped component's displayName.
     getDisplayName: function getDisplayName(name) {
-      return &#x27;Connect(&#x27; + name + &#x27;)&#x27;;
+      return 'Connect(' + name + ')';
     },
 
-    // if mapStateToProps is falsy, the Connect component doesn&#x27;t subscribe to store state changes
+    // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
     shouldHandleStateChanges: Boolean(mapStateToProps),
 
     // passed through to selectorFactory
@@ -1244,8 +1237,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1253,7 +1246,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1275,9 +1268,9 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">function connectAdvanced(<span class="apidocCodeCommentSpan"> /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options) =&#x3e; (state, props) =&#x3e; ({
+    <li>description and source-code<pre class="apidocCodePre">function connectAdvanced(<span class="apidocCodeCommentSpan"> /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options) =&gt; (state, props) =&gt; ({
       thing: state.things[props.thingId],
-      saveThing: fields =&#x3e; dispatch(actionCreators.saveThing(props.thingId, fields)),
+      saveThing: fields =&gt; dispatch(actionCreators.saveThing(props.thingId, fields)),
     }))(YourComponent)
    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
   outside of their selector as an optimization. Options passed to connectAdvanced are passed to
@@ -1289,25 +1282,25 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 </span>selectorFactory) {
   var _contextTypes, _childContextTypes;
 
-  var _ref = arguments.length &#x3e; 1 &#x26;&#x26; arguments[1] !== undefined ? arguments[1] : {},
+  var _ref = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : {},
       _ref$getDisplayName = _ref.getDisplayName,
       getDisplayName = _ref$getDisplayName === undefined ? function (name) {
-    return &#x27;ConnectAdvanced(&#x27; + name + &#x27;)&#x27;;
+    return 'ConnectAdvanced(' + name + ')';
   } : _ref$getDisplayName,
       _ref$methodName = _ref.methodName,
-      methodName = _ref$methodName === undefined ? &#x27;connectAdvanced&#x27; : _ref$methodName,
+      methodName = _ref$methodName === undefined ? 'connectAdvanced' : _ref$methodName,
       _ref$renderCountProp = _ref.renderCountProp,
       renderCountProp = _ref$renderCountProp === undefined ? undefined : _ref$renderCountProp,
       _ref$shouldHandleStat = _ref.shouldHandleStateChanges,
       shouldHandleStateChanges = _ref$shouldHandleStat === undefined ? true : _ref$shouldHandleStat,
       _ref$storeKey = _ref.storeKey,
-      storeKey = _ref$storeKey === undefined ? &#x27;store&#x27; : _ref$storeKey,
+      storeKey = _ref$storeKey === undefined ? 'store' : _ref$storeKey,
       _ref$withRef = _ref.withRef,
       withRef = _ref$withRef === undefined ? false : _ref$withRef,
-      connectOptions = _objectWithoutProperties(_ref, [&#x27;getDisplayName&#x27;, &#x27;methodName&#x27;, &#x27;renderCountProp&#x27;, &#x27;shouldHandleStateChanges
-&#x27;, &#x27;storeKey&#x27;, &#x27;withRef&#x27;]);
+      connectOptions = _objectWithoutProperties(_ref, ['getDisplayName', 'methodName', 'renderCountProp', 'shouldHandleStateChanges
+', 'storeKey', 'withRef']);
 
-  var subscriptionKey = storeKey + &#x27;Subscription&#x27;;
+  var subscriptionKey = storeKey + 'Subscription';
   var version = hotReloadingVersion++;
 
   var contextTypes = (_contextTypes = {}, _contextTypes[storeKey] = _PropTypes.storeShape, _contextTypes[subscriptionKey] = _PropTypes
@@ -1316,10 +1309,10 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 );
 
   return function wrapWithConnect(WrappedComponent) {
-    (0, _invariant2.default)(typeof WrappedComponent == &#x27;function&#x27;, &#x27;You must pass a component to the function returned by &#x27; + (&#x27;
-connect. Instead received &#x27; + JSON.stringify(WrappedComponent)));
+    (0, _invariant2.default)(typeof WrappedComponent == 'function', 'You must pass a component to the function returned by ' + ('
+connect. Instead received ' + JSON.stringify(WrappedComponent)));
 
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || &#x27;Component&#x27;;
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
 
     var displayName = getDisplayName(wrappedComponentName);
 
@@ -1350,15 +1343,15 @@ connect. Instead received &#x27; + JSON.stringify(WrappedComponent)));
         _this.propsMode = Boolean(props[storeKey]);
         _this.setWrappedInstance = _this.setWrappedInstance.bind(_this);
 
-        (0, _invariant2.default)(_this.store, &#x27;Could not find &#x22;&#x27; + storeKey + &#x27;&#x22; in either the context or props of &#x27; + (&#x27;&#x22;&#x27; + displayName
- + &#x27;&#x22;. Either wrap the root component in a &#x3c;Provider&#x3e;, &#x27;) + ...</pre></li>
+        (0, _invariant2.default)(_this.store, 'Could not find "' + storeKey + '" in either the context or props of ' + ('"' + displayName
+ + '". Either wrap the root component in a &lt;Provider&gt;, ') + ...</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1366,7 +1359,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1389,8 +1382,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
-  return typeof mapDispatchToProps === &#x27;function&#x27; ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapDispatchToProps, &#x27;mapDispatchToProps
-&#x27;) : undefined;
+  return typeof mapDispatchToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapDispatchToProps, 'mapDispatchToProps
+') : undefined;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1422,7 +1415,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
-  return mapDispatchToProps &#x26;&#x26; typeof mapDispatchToProps === &#x27;object&#x27; ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function (dispatch
+  return mapDispatchToProps &amp;&amp; typeof mapDispatchToProps === 'object' ? (0, _wrapMapToProps.wrapMapToPropsConstant)(function (dispatch
 ) {
     return (0, _redux.bindActionCreators)(mapDispatchToProps, dispatch);
   }) : undefined;
@@ -1449,7 +1442,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function whenMapStateToPropsIsFunction(mapStateToProps) {
-  return typeof mapStateToProps === &#x27;function&#x27; ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapStateToProps, &#x27;mapStateToProps&#x27;) : undefined
+  return typeof mapStateToProps === 'function' ? (0, _wrapMapToProps.wrapMapToPropsFunc)(mapStateToProps, 'mapStateToProps') : undefined
 ;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -1506,7 +1499,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function whenMergePropsIsFunction(mergeProps) {
-  return typeof mergeProps === &#x27;function&#x27; ? wrapMergePropsFunc(mergeProps) : undefined;
+  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -1555,7 +1548,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
         hasRunOnce = true;
         mergedProps = nextMergedProps;
 
-        if (process.env.NODE_ENV !== &#x27;production&#x27;) (0, _verifyPlainObject2.default)(mergedProps, displayName, &#x27;mergeProps&#x27;);
+        if (process.env.NODE_ENV !== 'production') (0, _verifyPlainObject2.default)(mergedProps, displayName, 'mergeProps');
       }
 
       return mergedProps;
@@ -1587,13 +1580,13 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
   var initMapStateToProps = _ref2.initMapStateToProps,
       initMapDispatchToProps = _ref2.initMapDispatchToProps,
       initMergeProps = _ref2.initMergeProps,
-      options = _objectWithoutProperties(_ref2, [&#x27;initMapStateToProps&#x27;, &#x27;initMapDispatchToProps&#x27;, &#x27;initMergeProps&#x27;]);
+      options = _objectWithoutProperties(_ref2, ['initMapStateToProps', 'initMapDispatchToProps', 'initMergeProps']);
 
   var mapStateToProps = initMapStateToProps(dispatch, options);
   var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
   var mergeProps = initMergeProps(dispatch, options);
 
-  if (process.env.NODE_ENV !== &#x27;production&#x27;) {
+  if (process.env.NODE_ENV !== 'production') {
     (0, _verifySubselectors2.default)(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
   }
 
@@ -1606,8 +1599,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1615,7 +1608,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1703,7 +1696,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     state = nextState;
     ownProps = nextOwnProps;
 
-    if (propsChanged &#x26;&#x26; stateChanged) return handleNewPropsAndNewState();
+    if (propsChanged &amp;&amp; stateChanged) return handleNewPropsAndNewState();
     if (propsChanged) return handleNewProps();
     if (stateChanged) return handleNewState();
     return mergedProps;
@@ -1735,7 +1728,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     <li>description and source-code<pre class="apidocCodePre">function shallowEqual(objA, objB) {
   if (is(objA, objB)) return true;
 
-  if (typeof objA !== &#x27;object&#x27; || objA === null || typeof objB !== &#x27;object&#x27; || objB === null) {
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
     return false;
   }
 
@@ -1744,7 +1737,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 
   if (keysA.length !== keysB.length) return false;
 
-  for (var i = 0; i &#x3c; keysA.length; i++) {
+  for (var i = 0; i &lt; keysA.length; i++) {
     if (!hasOwn.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
       return false;
     }
@@ -1757,8 +1750,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1766,7 +1759,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1790,7 +1783,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function verifyPlainObject(value, displayName, methodName) {
   if (!(0, _isPlainObject2.default)(value)) {
-    (0, _warning2.default)(methodName + &#x27;() in &#x27; + displayName + &#x27; must return a plain object. Instead received &#x27; + value + &#x27;.&#x27;);
+    (0, _warning2.default)(methodName + '() in ' + displayName + ' must return a plain object. Instead received ' + value + '.');
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
@@ -1798,8 +1791,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1807,7 +1800,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1830,17 +1823,17 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
-  verify(mapStateToProps, &#x27;mapStateToProps&#x27;, displayName);
-  verify(mapDispatchToProps, &#x27;mapDispatchToProps&#x27;, displayName);
-  verify(mergeProps, &#x27;mergeProps&#x27;, displayName);
+  verify(mapStateToProps, 'mapStateToProps', displayName);
+  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
+  verify(mergeProps, 'mergeProps', displayName);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1848,7 +1841,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1872,13 +1865,13 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function warning(message) {
 <span class="apidocCodeCommentSpan">  /* eslint-disable no-console */
-</span>  if (typeof console !== &#x27;undefined&#x27; &#x26;&#x26; typeof console.error === &#x27;function&#x27;) {
+</span>  if (typeof console !== 'undefined' &amp;&amp; typeof console.error === 'function') {
     console.error(message);
   }
   /* eslint-enable no-console */
   try {
     // This error was thrown as a convenience so that if you enable
-    // &#x22;break on all exceptions&#x22; in your console,
+    // "break on all exceptions" in your console,
     // it would pause the execution at this line.
     throw new Error(message);
     /* eslint-disable no-empty */
@@ -1890,8 +1883,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1899,7 +1892,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1931,8 +1924,8 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       Connect.prototype.initSubscription = function initSubscription() {
 if (!shouldHandleStateChanges) return;
 
-// parentSub&#x27;s source should match where store came from: props vs. context. A component
-// connected to the store via props shouldn&#x27;t use subscription from context, or vice versa.
+// parentSub's source should match where store came from: props vs. context. A component
+// connected to the store via props shouldn't use subscription from context, or vice versa.
 var parentSub = (this.propsMode ? this.props : this.context)[subscriptionKey];
 this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">default</span>(this.store, parentSub, this.onStateChange
 .bind(this));
@@ -1940,7 +1933,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
 // `notifyNestedSubs` is duplicated to handle the case where the component is  unmounted in
 // the middle of the notification loop, where `this.subscription` will then be null. An
 // extra null check every change can be avoided by copying the method onto `this` and then
-// replacing it with a no-op on unmount. This can probably be avoided if Subscription&#x27;s
+// replacing it with a no-op on unmount. This can probably be avoided if Subscription's
 // listeners logic is changed to not call listeners that have been unsubscribed in the
 // middle of the notification loop.
 ...</pre></li>
@@ -1963,7 +1956,7 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function getDependsOnOwnProps(mapToProps) {
-  return mapToProps.dependsOnOwnProps !== null &#x26;&#x26; mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps
+  return mapToProps.dependsOnOwnProps !== null &amp;&amp; mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps
 ) : mapToProps.length !== 1;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2017,13 +2010,13 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
       proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
       var props = proxy(stateOrDispatch, ownProps);
 
-      if (typeof props === &#x27;function&#x27;) {
+      if (typeof props === 'function') {
         proxy.mapToProps = props;
         proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
         props = proxy(stateOrDispatch, ownProps);
       }
 
-      if (process.env.NODE_ENV !== &#x27;production&#x27;) (0, _verifyPlainObject2.default)(props, displayName, methodName);
+      if (process.env.NODE_ENV !== 'production') (0, _verifyPlainObject2.default)(props, displayName, methodName);
 
       return props;
     };
@@ -2043,3 +2036,4 @@ this.subscription = new _Subscription2.<span class="apidocCodeKeywordSpan">defau
     ]
 </div>
 </div>
+</body></html>
