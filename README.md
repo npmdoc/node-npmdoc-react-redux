@@ -1,9 +1,14 @@
-# api documentation for  [react-redux (v5.0.3)](https://github.com/gaearon/react-redux)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-redux.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-redux)
+# npmdoc-react-redux
+
+#### api documentation for  [react-redux (v5.0.4)](https://github.com/gaearon/react-redux)  [![npm package](https://img.shields.io/npm/v/npmdoc-react-redux.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-react-redux) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-react-redux.svg)](https://travis-ci.org/npmdoc/node-npmdoc-react-redux)
+
 #### Official React bindings for Redux
 
-[![NPM](https://nodei.co/npm/react-redux.png?downloads=true)](https://www.npmjs.com/package/react-redux)
+[![NPM](https://nodei.co/npm/react-redux.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/react-redux)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-react-redux/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-react-redux%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-redux/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-react-redux/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-react-redux/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-react-redux/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-react-redux/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-react-redux/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Dan Abramov",
-        "email": "dan.abramov@me.com",
         "url": "http://github.com/gaearon"
     },
     "browserify": {
@@ -30,11 +34,13 @@
         "url": "https://github.com/gaearon/react-redux/issues"
     },
     "dependencies": {
+        "create-react-class": "^15.5.1",
         "hoist-non-react-statics": "^1.0.3",
         "invariant": "^2.0.0",
         "lodash": "^4.2.0",
         "lodash-es": "^4.2.0",
-        "loose-envify": "^1.1.0"
+        "loose-envify": "^1.1.0",
+        "prop-types": "^15.0.0"
     },
     "description": "Official React bindings for Redux",
     "devDependencies": {
@@ -80,7 +86,6 @@
         "mocha": "^3.2.0",
         "nyc": "^10.0.0",
         "react": "^15.0.0",
-        "react-addons-test-utils": "^15.0.0",
         "react-dom": "^15.0.0",
         "redux": "^3.0.0",
         "rimraf": "^2.3.4",
@@ -88,8 +93,8 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "86c3b68d56e74294a42e2a740ab66117ef6c019f",
-        "tarball": "https://registry.npmjs.org/react-redux/-/react-redux-5.0.3.tgz"
+        "shasum": "1563babadcfb2672f57f9ceaa439fb16bf85d55b",
+        "tarball": "https://registry.npmjs.org/react-redux/-/react-redux-5.0.4.tgz"
     },
     "files": [
         "dist",
@@ -97,7 +102,7 @@
         "src",
         "es"
     ],
-    "gitHead": "1c714abc17633c62363491d6819298810c774b5d",
+    "gitHead": "85145c2a8d3e0d49eb90fe561141ad57530a2603",
     "homepage": "https://github.com/gaearon/react-redux",
     "jsnext:main": "es/index.js",
     "keywords": [
@@ -115,12 +120,10 @@
     "main": "./lib/index.js",
     "maintainers": [
         {
-            "name": "gaearon",
-            "email": "dan.abramov@gmail.com"
+            "name": "gaearon"
         },
         {
-            "name": "timdorr",
-            "email": "timdorr@timdorr.com"
+            "name": "timdorr"
         }
     ],
     "module": "es/index.js",
@@ -134,7 +137,6 @@
         "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
         "redux": "^2.0.0 || ^3.0.0"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/reactjs/react-redux.git"
@@ -153,314 +155,9 @@
         "test:cov": "cross-env NODE_ENV=test nyc npm test",
         "test:watch": "npm test -- --watch"
     },
-    "version": "5.0.3"
+    "version": "5.0.4",
+    "bin": {}
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module react-redux](#apidoc.module.react-redux)
-1.  boolean <span class="apidocSignatureSpan">react-redux.</span>__esModule
-1.  [function <span class="apidocSignatureSpan">react-redux.</span>Provider (props, context)](#apidoc.element.react-redux.Provider)
-1.  [function <span class="apidocSignatureSpan">react-redux.</span>connect (mapStateToProps, mapDispatchToProps, mergeProps)](#apidoc.element.react-redux.connect)
-1.  [function <span class="apidocSignatureSpan">react-redux.</span>connectAdvanced ( /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options)](#apidoc.element.react-redux.connectAdvanced)
-1.  object <span class="apidocSignatureSpan">react-redux.</span>Provider.childContextTypes
-1.  object <span class="apidocSignatureSpan">react-redux.</span>Provider.propTypes
-1.  object <span class="apidocSignatureSpan">react-redux.</span>Provider.prototype
-
-#### [module react-redux.Provider](#apidoc.module.react-redux.Provider)
-1.  [function <span class="apidocSignatureSpan">react-redux.</span>Provider (props, context)](#apidoc.element.react-redux.Provider.Provider)
-1.  object <span class="apidocSignatureSpan">react-redux.Provider.</span>childContextTypes
-1.  object <span class="apidocSignatureSpan">react-redux.Provider.</span>propTypes
-1.  string <span class="apidocSignatureSpan">react-redux.Provider.</span>displayName
-
-#### [module react-redux.Provider.childContextTypes](#apidoc.module.react-redux.Provider.childContextTypes)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.childContextTypes.</span>store ()](#apidoc.element.react-redux.Provider.childContextTypes.store)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.childContextTypes.</span>storeSubscription ()](#apidoc.element.react-redux.Provider.childContextTypes.storeSubscription)
-
-#### [module react-redux.Provider.propTypes](#apidoc.module.react-redux.Provider.propTypes)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.propTypes.</span>children ()](#apidoc.element.react-redux.Provider.propTypes.children)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.propTypes.</span>store ()](#apidoc.element.react-redux.Provider.propTypes.store)
-
-#### [module react-redux.Provider.prototype](#apidoc.module.react-redux.Provider.prototype)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.prototype.</span>componentWillReceiveProps (nextProps)](#apidoc.element.react-redux.Provider.prototype.componentWillReceiveProps)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.prototype.</span>getChildContext ()](#apidoc.element.react-redux.Provider.prototype.getChildContext)
-1.  [function <span class="apidocSignatureSpan">react-redux.Provider.prototype.</span>render ()](#apidoc.element.react-redux.Provider.prototype.render)
-
-
-
-# <a name="apidoc.module.react-redux"></a>[module react-redux](#apidoc.module.react-redux)
-
-#### <a name="apidoc.element.react-redux.Provider"></a>[function <span class="apidocSignatureSpan">react-redux.</span>Provider (props, context)](#apidoc.element.react-redux.Provider)
-- description and source-code
-```javascript
-function Provider(props, context) {
-  _classCallCheck(this, Provider);
-
-  var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
-
-  _this.store = props.store;
-  return _this;
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.react-redux.connect"></a>[function <span class="apidocSignatureSpan">react-redux.</span>connect (mapStateToProps, mapDispatchToProps, mergeProps)](#apidoc.element.react-redux.connect)
-- description and source-code
-```javascript
-function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
-  var _ref2 = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {},
-      _ref2$pure = _ref2.pure,
-      pure = _ref2$pure === undefined ? true : _ref2$pure,
-      _ref2$areStatesEqual = _ref2.areStatesEqual,
-      areStatesEqual = _ref2$areStatesEqual === undefined ? strictEqual : _ref2$areStatesEqual,
-      _ref2$areOwnPropsEqua = _ref2.areOwnPropsEqual,
-      areOwnPropsEqual = _ref2$areOwnPropsEqua === undefined ? _shallowEqual2.default : _ref2$areOwnPropsEqua,
-      _ref2$areStatePropsEq = _ref2.areStatePropsEqual,
-      areStatePropsEqual = _ref2$areStatePropsEq === undefined ? _shallowEqual2.default : _ref2$areStatePropsEq,
-      _ref2$areMergedPropsE = _ref2.areMergedPropsEqual,
-      areMergedPropsEqual = _ref2$areMergedPropsE === undefined ? _shallowEqual2.default : _ref2$areMergedPropsE,
-      extraOptions = _objectWithoutProperties(_ref2, ['pure', 'areStatesEqual', 'areOwnPropsEqual', 'areStatePropsEqual', 'areMergedPropsEqual
-']);
-
-  var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
-  var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
-  var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
-
-  return connectHOC(selectorFactory, _extends({
-    // used in error messages
-    methodName: 'connect',
-
-    // used to compute Connect's displayName from the wrapped component's displayName.
-    getDisplayName: function getDisplayName(name) {
-      return 'Connect(' + name + ')';
-    },
-
-    // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
-    shouldHandleStateChanges: Boolean(mapStateToProps),
-
-    // passed through to selectorFactory
-    initMapStateToProps: initMapStateToProps,
-    initMapDispatchToProps: initMapDispatchToProps,
-    initMergeProps: initMergeProps,
-    pure: pure,
-    areStatesEqual: areStatesEqual,
-    areOwnPropsEqual: areOwnPropsEqual,
-    areStatePropsEqual: areStatePropsEqual,
-    areMergedPropsEqual: areMergedPropsEqual
-
-  }, extraOptions));
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.react-redux.connectAdvanced"></a>[function <span class="apidocSignatureSpan">react-redux.</span>connectAdvanced ( /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options)](#apidoc.element.react-redux.connectAdvanced)
-- description and source-code
-```javascript
-function connectAdvanced(<span class="apidocCodeCommentSpan"> /* selectorFactory is a func that is responsible for returning the selector function used to compute new props from state, props, and dispatch. For example: export default connectAdvanced((dispatch, options) => (state, props) => ({
-      thing: state.things[props.thingId],
-      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
-    }))(YourComponent)
-   Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
-  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
-  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
-   Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
-  props. Do not use connectAdvanced directly without memoizing results between calls to your
-  selector, otherwise the Connect component will re-render on every state or props change.
-*/
-</span>selectorFactory) {
-  var _contextTypes, _childContextTypes;
-
-  var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-      _ref$getDisplayName = _ref.getDisplayName,
-      getDisplayName = _ref$getDisplayName === undefined ? function (name) {
-    return 'ConnectAdvanced(' + name + ')';
-  } : _ref$getDisplayName,
-      _ref$methodName = _ref.methodName,
-      methodName = _ref$methodName === undefined ? 'connectAdvanced' : _ref$methodName,
-      _ref$renderCountProp = _ref.renderCountProp,
-      renderCountProp = _ref$renderCountProp === undefined ? undefined : _ref$renderCountProp,
-      _ref$shouldHandleStat = _ref.shouldHandleStateChanges,
-      shouldHandleStateChanges = _ref$shouldHandleStat === undefined ? true : _ref$shouldHandleStat,
-      _ref$storeKey = _ref.storeKey,
-      storeKey = _ref$storeKey === undefined ? 'store' : _ref$storeKey,
-      _ref$withRef = _ref.withRef,
-      withRef = _ref$withRef === undefined ? false : _ref$withRef,
-      connectOptions = _objectWithoutProperties(_ref, ['getDisplayName', 'methodName', 'renderCountProp', 'shouldHandleStateChanges
-', 'storeKey', 'withRef']);
-
-  var subscriptionKey = storeKey + 'Subscription';
-  var version = hotReloadingVersion++;
-
-  var contextTypes = (_contextTypes = {}, _contextTypes[storeKey] = _PropTypes.storeShape, _contextTypes[subscriptionKey] = _PropTypes
-.subscriptionShape, _contextTypes);
-  var childContextTypes = (_childContextTypes = {}, _childContextTypes[subscriptionKey] = _PropTypes.subscriptionShape, _childContextTypes
-);
-
-  return function wrapWithConnect(WrappedComponent) {
-    (0, _invariant2.default)(typeof WrappedComponent == 'function', 'You must pass a component to the function returned by ' + ('
-connect. Instead received ' + JSON.stringify(WrappedComponent)));
-
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
-
-    var displayName = getDisplayName(wrappedComponentName);
-
-    var selectorFactoryOptions = _extends({}, connectOptions, {
-      getDisplayName: getDisplayName,
-      methodName: methodName,
-      renderCountProp: renderCountProp,
-      shouldHandleStateChanges: shouldHandleStateChanges,
-      storeKey: storeKey,
-      withRef: withRef,
-      displayName: displayName,
-      wrappedComponentName: wrappedComponentName,
-      WrappedComponent: WrappedComponent
-    });
-
-    var Connect = function (_Component) {
-      _inherits(Connect, _Component);
-
-      function Connect(props, context) {
-        _classCallCheck(this, Connect);
-
-        var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
-
-        _this.version = version;
-        _this.state = {};
-        _this.renderCount = 0;
-        _this.store = props[storeKey] || context[storeKey];
-        _this.propsMode = Boolean(props[storeKey]);
-        _this.setWrappedInstance = _this.setWrappedInstance.bind(_this);
-
-        (0, _invariant2.default)(_this.store, 'Could not find "' + storeKey + '" in either the context or props of ' + ('"' + displayName
- + '". Either wrap the root component in a <Provider>, ') + ...
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.react-redux.Provider"></a>[module react-redux.Provider](#apidoc.module.react-redux.Provider)
-
-#### <a name="apidoc.element.react-redux.Provider.Provider"></a>[function <span class="apidocSignatureSpan">react-redux.</span>Provider (props, context)](#apidoc.element.react-redux.Provider.Provider)
-- description and source-code
-```javascript
-function Provider(props, context) {
-  _classCallCheck(this, Provider);
-
-  var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
-
-  _this.store = props.store;
-  return _this;
-}
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.react-redux.Provider.childContextTypes"></a>[module react-redux.Provider.childContextTypes](#apidoc.module.react-redux.Provider.childContextTypes)
-
-#### <a name="apidoc.element.react-redux.Provider.childContextTypes.store"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.childContextTypes.</span>store ()](#apidoc.element.react-redux.Provider.childContextTypes.store)
-- description and source-code
-```javascript
-store = function () { [native code] }
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.react-redux.Provider.childContextTypes.storeSubscription"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.childContextTypes.</span>storeSubscription ()](#apidoc.element.react-redux.Provider.childContextTypes.storeSubscription)
-- description and source-code
-```javascript
-storeSubscription = function () { [native code] }
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.react-redux.Provider.propTypes"></a>[module react-redux.Provider.propTypes](#apidoc.module.react-redux.Provider.propTypes)
-
-#### <a name="apidoc.element.react-redux.Provider.propTypes.children"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.propTypes.</span>children ()](#apidoc.element.react-redux.Provider.propTypes.children)
-- description and source-code
-```javascript
-children = function () { [native code] }
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.react-redux.Provider.propTypes.store"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.propTypes.</span>store ()](#apidoc.element.react-redux.Provider.propTypes.store)
-- description and source-code
-```javascript
-store = function () { [native code] }
-```
-- example usage
-```shell
-n/a
-```
-
-
-
-# <a name="apidoc.module.react-redux.Provider.prototype"></a>[module react-redux.Provider.prototype](#apidoc.module.react-redux.Provider.prototype)
-
-#### <a name="apidoc.element.react-redux.Provider.prototype.componentWillReceiveProps"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.prototype.</span>componentWillReceiveProps (nextProps)](#apidoc.element.react-redux.Provider.prototype.componentWillReceiveProps)
-- description and source-code
-```javascript
-componentWillReceiveProps = function (nextProps) {
-  var store = this.store;
-  var nextStore = nextProps.store;
-
-
-  if (store !== nextStore) {
-    warnAboutReceivingStore();
-  }
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.react-redux.Provider.prototype.getChildContext"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.prototype.</span>getChildContext ()](#apidoc.element.react-redux.Provider.prototype.getChildContext)
-- description and source-code
-```javascript
-function getChildContext() {
-  return { store: this.store, storeSubscription: null };
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.react-redux.Provider.prototype.render"></a>[function <span class="apidocSignatureSpan">react-redux.Provider.prototype.</span>render ()](#apidoc.element.react-redux.Provider.prototype.render)
-- description and source-code
-```javascript
-function render() {
-  return _react.Children.only(this.props.children);
-}
-```
-- example usage
-```shell
-n/a
 ```
 
 
